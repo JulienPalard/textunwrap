@@ -13,8 +13,8 @@ textunwrap
         :target: https://textunwrap.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/julienpalard/textunwrap/shield.svg
-     :target: https://pyup.io/repos/github/julienpalard/textunwrap/
+.. image:: https://pyup.io/repos/github/JulienPalard/textunwrap/shield.svg
+     :target: https://pyup.io/repos/github/JulienPalard/textunwrap/
      :alt: Updates
 
 

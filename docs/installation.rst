@@ -12,9 +12,10 @@ To install textunwrap, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install textunwrap
+    $ python3 -m pip install textunwrap
 
-This is the preferred method to install textunwrap, as it will always install the most recent stable release. 
+This is the preferred method to install textunwrap, as it will always
+install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -32,20 +33,20 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/julienpalard/textunwrap
+    $ git clone git://github.com/JulienPalard/textunwrap
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/julienpalard/textunwrap/tarball/master
+    $ curl  -OL https://github.com/JulienPalard/textunwrap/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
 .. code-block:: console
 
-    $ python setup.py install
+    $ python3 setup.py install
 
 
-.. _Github repo: https://github.com/julienpalard/textunwrap
-.. _tarball: https://github.com/julienpalard/textunwrap/tarball/master
+.. _Github repo: https://github.com/JulienPalard/textunwrap
+.. _tarball: https://github.com/JulienPalard/textunwrap/tarball/master

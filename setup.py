@@ -17,7 +17,7 @@ setup(
     long_description=readme,
     author="Julien Palard",
     author_email='julien@palard.fr',
-    url='https://github.com/julienpalard/textunwrap',
+    url='https://github.com/JulienPalard/textunwrap',
     packages=[
         'textunwrap',
     ],
