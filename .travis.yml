@@ -20,10 +20,11 @@ deploy:
   on:
     tags: true
 env:
+- TOXENV=py36
 - TOXENV=py35
 - TOXENV=py34
 - TOXENV=py33
 install: pip install -U tox
 language: python
-python: 3.5
+python: 3.6
 script: tox -e ${TOXENV}
