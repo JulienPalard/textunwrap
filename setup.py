@@ -12,7 +12,7 @@ test_requirements = []
 
 setup(
     name='textunwrap',
-    version='0.1.0',
+    version='0.1.1',
     description="Tries to reverse textwrap.wrap.",
     long_description=readme,
     author="Julien Palard",
