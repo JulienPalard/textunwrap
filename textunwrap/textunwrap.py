@@ -1,7 +1,11 @@
-"""Tries to reverse textwrap.wrap.
+#!/usr/bin/env python3
+
+"""Try to reverse textwrap.wrap.
 """
 
 import re
+from textunwrap import __version__
+
 
 SPACES = r'(?:[ \t\f\v\u00A0\u2028])'
 UNORDERED_LIST = r'(?:[*\u2022+])'
@@ -18,6 +22,7 @@ def unwrap(text):
     """Given a text composed of wrapped paragraphs, try to unwrap them.
     """
     in_bullet_list = False
+
     def from_same_paragraph(line_a, line_b, median_len=70):
         """Tries to determine if line_a and line_b are from the same
         paragraph.
@@ -47,3 +52,43 @@ def unwrap(text):
             paragraphs.append([line])
         previous_line = line
     return '\n\n'.join(' '.join(lines) for lines in paragraphs if lines) + '\n'
+
+
+def parse_args():
+    """Parse command line parameters
+
+    Args:
+      args ([str]): command line parameters as list of strings
+
+    Returns:
+      :obj:`argparse.Namespace`: command line parameters namespace
+    """
+    import argparse
+    parser = argparse.ArgumentParser(
+        description="Unwrap a wrapped text file.")
+    parser.add_argument(
+        '--version',
+        action='version',
+        version='textunwrap {ver}'.format(ver=__version__))
+    parser.add_argument(
+        dest="infile",
+        type=argparse.FileType('r'),
+        help="Input file path.",
+        metavar="FILE")
+    return parser.parse_args()
+
+
+def textunwrap_file(infile):
+    """Unwrap a given opened file, returns the unwrapped content as a string.
+    """
+    return unwrap(infile.read())
+
+
+def run():
+    """Entry point for console_scripts
+    """
+    print(textunwrap_file(**vars(parse_args())), end="")
+
+
+if __name__ == "__main__":
+    run()

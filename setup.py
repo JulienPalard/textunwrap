@@ -25,7 +25,8 @@ setup(
                  'textunwrap'},
     entry_points={
         'console_scripts': [
-            'textunwrap=textunwrap.cli:run'
+            'textunwrap=textunwrap.textunwrap:run',
+            'textwrap=textunwrap.textwrap:run'
         ]
     },
     include_package_data=True,
