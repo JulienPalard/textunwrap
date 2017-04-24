@@ -9,3 +9,4 @@ PyYAML
 pytest
 pylint
 twine
+tox
