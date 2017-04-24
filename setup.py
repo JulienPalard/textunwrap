@@ -6,14 +6,9 @@ from setuptools import setup
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-requirements = [
-    'Click>=6.0',
-    # TODO: put package requirements here
-]
+requirements = []
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
+test_requirements = []
 
 setup(
     name='textunwrap',
