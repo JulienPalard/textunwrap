@@ -17,9 +17,7 @@ deploy:
       VTBranJxYXczVjRFWXBrNjVSM0tpZHlCNDl5WVRaRFRnaGp5VnJ4N2ZDZ2pYTmkvdGNWQVlURUo2
       VlVSRGhVeXBRdnhVL2lIS0NzT3RPQjRJU0MzTHZmYnk2b1A2aXhNVE0rTnM3Ti9QK1g4ZG5pNkE9
   provider: pypi
-  true:
-    condition: $TOXENV == py27
-    repo: JulienPalard/textunwrap
+  on:
     tags: true
 env:
 - TOXENV=py35
