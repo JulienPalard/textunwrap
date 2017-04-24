@@ -13,10 +13,6 @@ textunwrap
         :target: https://textunwrap.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/JulienPalard/textunwrap/shield.svg
-     :target: https://pyup.io/repos/github/JulienPalard/textunwrap/
-     :alt: Updates
-
 
 Tries to reverse ``textwrap.wrap()``.
 
