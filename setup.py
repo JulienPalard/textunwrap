@@ -6,9 +6,6 @@ from setuptools import setup
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
-
 requirements = [
     'Click>=6.0',
     # TODO: put package requirements here
@@ -22,7 +19,7 @@ setup(
     name='textunwrap',
     version='0.1.0',
     description="Tries to reverse textwrap.wrap.",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author="Julien Palard",
     author_email='julien@palard.fr',
     url='https://github.com/julienpalard/textunwrap',
