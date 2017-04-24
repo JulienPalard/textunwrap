@@ -9,23 +9,19 @@ Tests for `textunwrap` module.
 """
 
 import os
-import re
 import glob
 import textwrap
 
 import pytest
 
-from contextlib import contextmanager
-from click.testing import CliRunner
-
 from textunwrap import textunwrap
-from textunwrap import cli
 
 
 FIXTURE_DIR = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
     'licenses/',
 )
+
 
 @pytest.mark.parametrize(
     "license_path",
