@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build_ubuntu:
+    strategy:
+      matrix:
+        tox:
+          - env: py36
+            python-version: '3.6'
+          - env: py37
+            python-version: '3.7'
+          - env: py38
+            python-version: '3.8'
+          - env: py39
+            python-version: '3.9'
+          - env: flake8
+            python-version: '3.9'
+
+    name: ${{ matrix.tox.env }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.tox.python-version }}
+      - uses: actions/cache@v2
+        with:
+          path: |
+            .venv
+            .tox
+          key: ${{ hashFiles('tox.ini') }}-${{ hashFiles('requirements-dev.txt') }}-${{ matrix.tox.python-version }}
+      - name: setup tox
+        run: |
+          python --version
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade tox
+      - name: run ${{ matrix.tox.env }}
+        run: |
+          tox -e ${{ matrix.tox.env }}
