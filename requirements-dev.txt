@@ -1,12 +1,6 @@
-pip
-bumpversion
-wheel
-watchdog
+build
 flake8
-coverage
-Sphinx
-PyYAML
-pytest
 pylint
-twine
+pytest
+sphinx
 tox
