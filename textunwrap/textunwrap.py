@@ -18,7 +18,7 @@ BULLET_ITEM = r'(?:{spaces}*{bullet_marker}{spaces}+)'.format(
     spaces=SPACES)
 
 
-def unwrap(text):
+def unwrap(text, median_len=70):
     """Given a text composed of wrapped paragraphs, try to unwrap them.
     """
     in_bullet_list = False
@@ -46,7 +46,7 @@ def unwrap(text):
     paragraphs = [[]]
     previous_line = ''
     for line in lines:
-        if from_same_paragraph(previous_line, line):
+        if from_same_paragraph(previous_line, line, median_len):
             paragraphs[-1].append(line)
         elif line:
             paragraphs.append([line])
